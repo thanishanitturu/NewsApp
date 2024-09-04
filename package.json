@@ -1,5 +1,7 @@
 {
- 
+
+  "homepage": "https://github.com/thanishanitturu/NewsApp",
+
   "name": "reactfolder",
  
   "version": "0.1.0",
@@ -63,9 +65,9 @@
  
   "scripts": {
  
+ 
    
   "start": "craco start",
- 
    
   "build": "craco build",
  
