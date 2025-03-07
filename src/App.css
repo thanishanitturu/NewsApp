@@ -51,11 +51,11 @@
 }
 
 /* Card image */
-.news-card img {
+/* .news-card img {
   width: 90%;
   height: 200px;
   transition: transform 0.3s ease;
-}
+} */
 
 /* Card content */
 .news-card .content {
@@ -102,9 +102,39 @@ body
 {
   background-color: #E8E9E6
 }
-.card
+/* .card
 {
   margin: 20px 0px;
   background-color: #F5F5DC;
   height: 450px;
+} */
+
+.card {
+  margin: 20px 0px;
+  background-color: #F5F5DC;
+  /* Remove fixed height */
+  /* height: 450px; */
+  padding: 10px; /* Add padding to ensure content doesn't touch the edges */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+  border-radius: 8px; /* Optional: Add rounded corners */
+}
+
+.news-card img {
+  width: 100%; /* Ensure the image takes the full width of the card */
+  height: auto; /* Allow the image to scale proportionally */
+  max-height: 200px; /* Set a max height to prevent the image from being too large */
+  object-fit: cover; /* Ensure the image covers the area without distortion */
+}
+
+.card-body {
+  padding: 15px; /* Add padding to the card body */
+}
+
+.card-text {
+  margin-bottom: 10px; /* Add spacing between text elements */
+}
+
+.btn {
+  width: 100%; /* Make the button full width */
+  margin-top: 10px; /* Add spacing above the button */
 }
