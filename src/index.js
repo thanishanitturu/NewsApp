@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+// reportWebVitals is a function used to measure and report performance metrics of a React application
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

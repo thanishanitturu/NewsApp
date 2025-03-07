@@ -72,7 +72,7 @@
 
 /* Add a slight transformation to content and image on hover for extra effect */
 .card:hover:img {
-  transform: scale(1.1); /* Scale up the image slightly */
+  transform: scale(1); /* Scale up the image slightly */
 }
 
 .card:hover .content {
