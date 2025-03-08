@@ -109,32 +109,78 @@ body
   height: 450px;
 } */
 
+/* Default styles for mobile devices */
 .card {
-  margin: 20px 0px;
+  margin: 20px 0;
   background-color: #F5F5DC;
-  /* Remove fixed height */
-  /* height: 450px; */
-  padding: 10px; /* Add padding to ensure content doesn't touch the edges */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
-  border-radius: 8px; /* Optional: Add rounded corners */
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
 }
 
-.news-card img {
+.card-img-top {
   width: 100%; /* Ensure the image takes the full width of the card */
-  height: auto; /* Allow the image to scale proportionally */
-  max-height: 200px; /* Set a max height to prevent the image from being too large */
-  object-fit: cover; /* Ensure the image covers the area without distortion */
+  height: 200px; /* Fixed height for all images */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+  border-radius: 8px 8px 0 0; /* Rounded corners for the top of the image */
 }
 
 .card-body {
-  padding: 15px; /* Add padding to the card body */
+  padding: 15px;
+  flex-grow: 1; /* Allow the card body to grow and fill the remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Space out content and button */
+}
+
+.card-title {
+  font-size: 1.25rem; /* Adjust title font size */
+  margin-bottom: 10px;
 }
 
 .card-text {
-  margin-bottom: 10px; /* Add spacing between text elements */
+  font-size: 1rem; /* Adjust description font size */
+  margin-bottom: 10px;
+}
+
+.text-body-secondary {
+  font-size: 0.875rem; /* Adjust author/date font size */
+  color: #6c757d; /* Gray color for secondary text */
 }
 
 .btn {
-  width: 100%; /* Make the button full width */
-  margin-top: 10px; /* Add spacing above the button */
+  width: 100%; /* Full-width button for mobile */
+  margin-top: 10px;
+  background-color: #282c34; /* Dark background for the button */
+  color: white; /* White text for the button */
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
 }
+
+/* Styles for tablets and desktops */
+@media (min-width: 768px) {
+  .card {
+    height: 450px; /* Fixed height for tablets and desktops */
+  }
+
+  .card-img-top {
+    height: 200px; /* Larger fixed height for tablets and desktops */
+  }
+
+  .btn {
+    width: auto; /* Reset button width to default */
+    margin-top: 0; /* Remove margin-top */
+    align-self: flex-start; /* Align button to the left */
+  }
+}
+
+
+
+
+
+
